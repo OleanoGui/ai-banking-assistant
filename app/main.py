@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 
+from app.services import chat_with_model
+
 app = FastAPI()
 
 
@@ -15,4 +17,5 @@ def health_check():
 
 @app.post("/chat")
 def chat(request: ChatRequest):
-    return {"message": f"Você disse: {request.message}"}
+    response = chat_with_model(request.message)
+    return {"message": response}
