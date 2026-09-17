@@ -10,4 +10,7 @@ def chat_with_model(message: str) -> str:
         model=OPENAI_MODEL,
         messages=[{"role": "user", "content": message}],
     )
-    return response.choices[0].message.content
+    content = response.choices[0].message.content
+    if content is None:
+        raise ValueError("Empty response from the AI provider.")
+    return content

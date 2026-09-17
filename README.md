@@ -1,11 +1,11 @@
 ## AI Banking Assistant
 
-API REST de aprendizado para explorar fundamentos de AI Engineering com Python,
-FastAPI e uma API de LLM.
+REST API for learning the fundamentals of AI Engineering with Python,
+FastAPI, and an LLM API.
 
-### Configuração inicial
+### Initial setup
 
-No PowerShell, a partir da raiz do projeto:
+In PowerShell, from the project root:
 
 ```powershell
 py -3.12 -m venv .venv
@@ -16,4 +16,4 @@ python -m pip install -r requirements.txt
 Copy-Item .env.example .env
 ```
 
-O arquivo `.env` deve conter configurações locais e nunca deve ser versionado.
+The `.env` file should contain local settings and must never be versioned.
